@@ -1,0 +1,24 @@
+<!-- reset_password.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <!-- Reset Password Form -->
+            <div class="reset-password-box">
+                <form action="update_password.php" method="post">
+                    <input type="hidden" name="token" value="<?php echo htmlspecialchars($_GET['token']); ?>">
+                    <input type="password" class="password ele" name="new_password" placeholder="New Password" required>
+                    <input type="password" class="password ele" name="confirm_password" placeholder="Confirm Password" required>
+                    <button type="submit" class="clkbtn" name="update_password">Update Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
